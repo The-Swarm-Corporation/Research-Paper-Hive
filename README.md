@@ -29,45 +29,30 @@ Ensure you have the following installed:
 - Required dependencies from `requirements.txt`
 
 ### Installation
+```bash
+$ pip3 install -U rph
+```
 
-1. Clone the repository:
+### API Keys Setup
+MedInsight Pro requires access to the OpenAI API, PubMed, and Semantic Scholar APIs. You’ll need to set up environment variables for these keys in your .env file:
 
-   ```bash
-   git clone https://github.com/yourusername/research-paper-hive.git
-   ```
+```bash
+OPENAI_API_KEY="your-openai-api-key"
+WORKSPACE_ID="your-workspace-id" # Your workspace ID 
+```
 
-2. Navigate to the project directory:
-
-   ```bash
-   cd research-paper-hive
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 ### Usage
 
-1. Start the application:
+```python
 
-   ```bash
-   python main.py
-   ```
+from rph.agent import summarize_papers
 
-2. Input your preferences in the command line or web interface (if available).
+if __name__ == "__main__":
+    summary = summarize_papers()
+    print(summary)
 
-3. Wait for the agents to complete their search and summarization.
-
-4. Review the summarized papers and download or explore the full versions.
-
-### Configuration
-
-You can configure the search and summarization parameters in the `config.yaml` file. Adjust settings such as:
-- Number of agents
-- Search depth and criteria
-- Output formats for summaries
+```
 
 ## Contributing
 
