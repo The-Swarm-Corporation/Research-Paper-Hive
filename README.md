@@ -1,67 +1,84 @@
-[![Multi-Modality](agorabanner.png)](https://discord.com/servers/agora-999382051935506503)
-
-# Python Package Template
+# Research-Paper-Hive
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/agora-999382051935506503) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@kyegomez3242) [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kye-g-38759a207/) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/kyegomezb)
 
-A easy, reliable, fluid template for python packages complete with docs, testing suites, readme's, github workflows, linting and much much more
 
+**Research-Paper-Hive** is an intelligent AI-powered application that helps you find and summarize research papers based on your preferences. Whether you're diving into a new research area or looking for papers tailored to specific topics, Research-Paper-Hive uses a swarm of AI agents to streamline your workflow by searching, analyzing, and summarizing relevant research papers for you.
 
-## Installation
+## Features
 
-You can install the package using pip
+- **Personalized Paper Search**: Input your preferences such as keywords, topics, or research fields, and Research-Paper-Hive will find relevant papers.
+- **AI-Powered Summaries**: Agents collaborate to summarize each paper, providing you with concise and informative overviews.
+- **Fast and Efficient**: With the power of swarm intelligence, Research-Paper-Hive processes and delivers results quickly.
+- **Customizable Search Criteria**: Tailor your search by adjusting the specificity of your preferences.
+- **Paper Ranking**: Get a ranked list of papers that are most aligned with your research interests.
 
-```bash
-pip install -e .
-```
+## How It Works
 
-# Usage
-```python
-print("hello world")
+1. **Input Preferences**: Provide Research-Paper-Hive with your specific preferences such as topics, keywords, or desired research fields.
+2. **Agent Search**: A swarm of AI agents will search through academic databases to find the most relevant papers.
+3. **Summarization**: Once papers are found, each agent works to generate concise summaries.
+4. **Review and Download**: Review the summarized papers, ranked by relevance, and download the ones you need.
 
-```
+## Getting Started
 
+### Prerequisites
 
+Ensure you have the following installed:
+- Python 3.10
+- Required dependencies from `requirements.txt`
 
-### Code Quality 🧹
+### Installation
 
-- `make style` to format the code
-- `make check_code_quality` to check code quality (PEP8 basically)
-- `black .`
-- `ruff . --fix`
+1. Clone the repository:
 
-### Tests 🧪
+   ```bash
+   git clone https://github.com/yourusername/research-paper-hive.git
+   ```
 
-[`pytests`](https://docs.pytest.org/en/7.1.x/) is used to run our tests.
+2. Navigate to the project directory:
 
-### Publish on PyPi 🚀
+   ```bash
+   cd research-paper-hive
+   ```
 
-**Important**: Before publishing, edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
+3. Install dependencies:
 
-```
-poetry build
-poetry publish
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### CI/CD 🤖
+### Usage
 
-We use [GitHub actions](https://github.com/features/actions) to automatically run tests and check code quality when a new PR is done on `main`.
+1. Start the application:
 
-On any pull request, we will check the code quality and tests.
+   ```bash
+   python main.py
+   ```
 
-When a new release is created, we will try to push the new code to PyPi. We use [`twine`](https://twine.readthedocs.io/en/stable/) to make our life easier. 
+2. Input your preferences in the command line or web interface (if available).
 
-The **correct steps** to create a new realease are the following:
-- edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
-- create a new [`tag`](https://git-scm.com/docs/git-tag) with the release name, e.g. `git tag v0.0.1 && git push origin v0.0.1` or from the GitHub UI.
-- create a new release from GitHub UI
+3. Wait for the agents to complete their search and summarization.
 
-The CI will run when you create the new release.
+4. Review the summarized papers and download or explore the full versions.
 
-# Docs
-We use MK docs. This repo comes with the zeta docs. All the docs configurations are already here along with the readthedocs configs.
+### Configuration
 
+You can configure the search and summarization parameters in the `config.yaml` file. Adjust settings such as:
+- Number of agents
+- Search depth and criteria
+- Output formats for summaries
 
+## Contributing
 
-# License
-MIT
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
