@@ -1,7 +1,7 @@
 import os
 from swarms import Agent, OpenAIChat
 from loguru import logger
-from rph.paper_fetcher import DailyPapersDownloader
+from paper_hive.paper_fetcher import DailyPapersDownloader
 from dotenv import load_dotenv
 
 load_dotenv()
